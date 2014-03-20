@@ -1,0 +1,21 @@
+#!/bin/sh
+# This is a very simple script that tries to pull in dependencies from other
+# repos. There are currently two dependencies: XHP and Hack's .hhi files. XHP's
+# php-lib needs to go in the xhp directory, and Hack's hhi files need to go in
+# the hhi file directory. If this script doesn't work for you, you can always
+# clone these projects and copy the files yourself.
+
+# Pull in the XHP files. These define the XHP classes that we need
+mkdir -p xhp
+wget -O xhp/core.php http://raw.github.com/facebook/xhp/master/php-lib/core.php
+wget -O xhp/html.php http://raw.github.com/facebook/xhp/master/php-lib/html.php
+wget -O xhp/init.php http://raw.github.com/facebook/xhp/master/php-lib/init.php
+sed -i "s|<?php|<?hh // decl|" xhp/core.php
+sed -i "s|<?php|<?hh|" xhp/html.php
+sed -i "s|<?php|<?hh // strict |" xhp/init.php
+
+# Pull in the hhi files. These define all the stdlib functions.
+rm -rf hhi
+git clone --depth 1 git@github.com:facebook/hhvm.git tmp_hhvm
+cp -rf tmp_hhvm/hphp/hack/hhi hhi
+rm -rf tmp_hhvm
