@@ -24,7 +24,7 @@ You can either install one of the many HHVM packages or build it from source you
 
 ### Cloning the hack-example-site GitHub
 
-If you're reading this README you probably already found the source code, but the site lives [here](https://github.com/facebook/hack-example-site).
+If you're reading this README you probably already found the source code, but the source code lives [here](https://github.com/facebook/hack-example-site).
 
 After cloning the GitHub, run `./setup` to pull in the required external dependencies.
 
