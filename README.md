@@ -32,6 +32,18 @@ After cloning the GitHub, run `./setup` to pull in the required external depende
 
 Nginx is a popular webserver and what I used when building this site. Here are instructions for how I set up my environment.
 
+#### Clone the GitHub
+You can clone it wherever you like, but for this example I'm putting it in ~/hack-example-site
+
+    cd ~
+    git clone git@github.com:hhvm/hack-example-site.git
+    
+#### Run the setup script
+
+    // Assuming you cloned hack-example-site to ~/hack-example-site
+    cd ~/hack-example-site
+    ./setup
+
 #### Install Nginx
 
     sudo apt-get install nginx
