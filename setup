@@ -6,13 +6,22 @@
 # clone these projects and copy the files yourself.
 
 # Pull in the XHP files. These define the XHP classes that we need
+rm -rf xhp
 mkdir -p xhp
-wget -O xhp/core.php https://raw.github.com/facebook/xhp/master/php-lib/core.php
-wget -O xhp/html.php https://raw.github.com/facebook/xhp/master/php-lib/html.php
-wget -O xhp/init.php https://raw.github.com/facebook/xhp/master/php-lib/init.php
-sed -i "s|<?php|<?hh // decl|" xhp/core.php
-sed -i "s|<?php|<?hh|" xhp/html.php
-sed -i "s|<?php|<?hh // strict |" xhp/init.php
+if type -p curl > /dev/null; then
+  curl "https://raw.github.com/facebook/xhp/master/php-lib/core.php" -o "/tmp/xhp_core.php"
+  curl "https://raw.github.com/facebook/xhp/master/php-lib/html.php" -o "/tmp/xhp_html.php"
+  curl "https://raw.github.com/facebook/xhp/master/php-lib/init.php" -o "/tmp/xhp_init.php"
+else
+  wget -O /tmp/xhp_core.php https://raw.github.com/facebook/xhp/master/php-lib/core.php
+  wget -O /tmp/xhp_html.php https://raw.github.com/facebook/xhp/master/php-lib/html.php
+  wget -O /tmp/xhp_init.php https://raw.github.com/facebook/xhp/master/php-lib/init.php
+fi
+
+sed -e "s|<?php|<?hh // decl|" /tmp/xhp_core.php > xhp/core.php
+sed -e "s|<?php|<?hh|" /tmp/xhp_html.php > xhp/html.php
+sed -e "s|<?php|<?hh // strict |" /tmp/xhp_init.php > xhp/init.php
+rm /tmp/xhp_core.php /tmp/xhp_html.php /tmp/xhp_init.php
 
 # Pull in the hhi files. These define all the stdlib functions.
 
