@@ -23,6 +23,7 @@ You can clone it wherever you like, but for this example I'm putting it in ~/hac
 
     cd ~
     git clone git@github.com:pvh/hack-example-site.git
+    cd hack-example-site
     
 #### Create an application with the new HHVM buildpack
 
