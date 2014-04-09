@@ -24,9 +24,9 @@ You can clone it wherever you like, but for this example I'm putting it in ~/hac
     cd ~
     git clone git@github.com:pvh/hack-example-site.git
     
-#### Create an application
+#### Create an application with the new HHVM buildpack
 
-    heroku create
+    heroku create --buildpack https://github.com/dzuelke/heroku-buildpack-php#hhvm
 
 #### Deploy the application
 
