@@ -7,15 +7,20 @@
 
 # Pull in the XHP files. These define the XHP classes that we need
 mkdir -p xhp
-wget -O xhp/core.php http://raw.github.com/facebook/xhp/master/php-lib/core.php
-wget -O xhp/html.php http://raw.github.com/facebook/xhp/master/php-lib/html.php
-wget -O xhp/init.php http://raw.github.com/facebook/xhp/master/php-lib/init.php
+wget -O xhp/core.php https://raw.github.com/facebook/xhp/master/php-lib/core.php
+wget -O xhp/html.php https://raw.github.com/facebook/xhp/master/php-lib/html.php
+wget -O xhp/init.php https://raw.github.com/facebook/xhp/master/php-lib/init.php
 sed -i "s|<?php|<?hh // decl|" xhp/core.php
 sed -i "s|<?php|<?hh|" xhp/html.php
 sed -i "s|<?php|<?hh // strict |" xhp/init.php
 
 # Pull in the hhi files. These define all the stdlib functions.
+
 rm -rf hhi
-git clone --depth 1 git@github.com:facebook/hhvm.git tmp_hhvm
-cp -rf tmp_hhvm/hphp/hack/hhi hhi
-rm -rf tmp_hhvm
+if [ -d "/usr/share/hhvm/hack/hhi" ]; then
+  cp -r /usr/share/hhvm/hack/hhi hhi
+else
+  git clone --depth 1 git@github.com:facebook/hhvm.git tmp_hhvm
+  cp -rf tmp_hhvm/hphp/hack/hhi hhi
+  rm -rf tmp_hhvm
+fi
