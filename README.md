@@ -1,4 +1,4 @@
-# Hack Lang Example Site
+	# Hack Lang Example Site
 
 ## Why does this site exist?
 
@@ -84,11 +84,16 @@ If you don't already have a Heroku account, start here: https://id.heroku.com/si
 
     git clone git@github.com:pvh/hack-example-site.git
     cd hack-example-site
-    git checkout -b heroku origin/heroku
+
+#### Add a "Procfile" which tells Heroku to start your app using HHVM
+
+    echo 'web: vendor/bin/heroku-hhvm-nginx' > Procfile
+    git add .
+    git commit -am "add a Procfile so that foreman/heroku know how to start the app"
 
 #### Create a heroku app and push the code
 
     heroku create --buildpack https://github.com/dzuelke/heroku-buildpack-php#hhvm
-    git push heroku heroku:master
+    git push heroku master
     heroku open
 
