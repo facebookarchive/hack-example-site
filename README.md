@@ -30,7 +30,8 @@ You can clone it wherever you like, but for this example I'm putting it in ~/hac
 
 #### Deploy the application
 
-    git push heroku master
+    git checkout -b heroku origin/heroku
+    git push heroku heroku:master
 
 #### Load a page in your browser!
 
