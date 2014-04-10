@@ -1,4 +1,4 @@
-	# Hack Lang Example Site
+# Hack Lang Example Site
 
 ## Why does this site exist?
 
