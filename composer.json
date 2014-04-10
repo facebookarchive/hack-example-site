@@ -1,0 +1,6 @@
+{
+  "name": "hhvm/hack-example-site",
+  "require": {
+     "hhvm/xhp": "*"
+  }
+}
