@@ -9,7 +9,7 @@
  *
  */
 
-require_once $_SERVER['DOCUMENT_ROOT'].'/xhp/init.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/vendor/hhvm/xhp/src/init.php';
 
 final class :phpfile extends :x:primitive {
   category %flow;
