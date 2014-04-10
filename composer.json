@@ -1,6 +1,6 @@
 {
   "name": "hhvm/hack-example-site",
   "require": {
-     "hhvm/xhp": "*"
+     "hhvm/xhp": "1.5.0"
   }
 }
