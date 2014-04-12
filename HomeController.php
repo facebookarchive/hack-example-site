@@ -11,7 +11,7 @@
 
 require_once $_SERVER['DOCUMENT_ROOT'].'/core/controller/init.php';
 require_once $_SERVER['DOCUMENT_ROOT'].'/core/controller/standard-page/init.php';
-require_once $_SERVER['DOCUMENT_ROOT'].'/xhp/init.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/vendor/hhvm/xhp/src/init.php';
 
 class HomeController extends GetController {
   use StandardPage;

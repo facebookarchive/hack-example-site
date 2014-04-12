@@ -1,0 +1,43 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
+    ],
+    "hash": "9a8f6c949e9c91c5b2e1f67d349d6ce4",
+    "packages": [
+        {
+            "name": "hhvm/xhp",
+            "version": "1.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pvh/xhp.git",
+                "reference": "eb4f29b51456f6706d7073a28a52f65f3996ef11"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pvh/xhp/zipball/eb4f29b51456f6706d7073a28a52f65f3996ef11",
+                "reference": "eb4f29b51456f6706d7073a28a52f65f3996ef11",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "time": "2014-04-10 01:49:49"
+        }
+    ],
+    "packages-dev": [
+
+    ],
+    "aliases": [
+
+    ],
+    "minimum-stability": "stable",
+    "stability-flags": [
+
+    ],
+    "platform": [
+
+    ],
+    "platform-dev": [
+
+    ]
+}

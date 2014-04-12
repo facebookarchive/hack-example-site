@@ -26,8 +26,6 @@ You can either install one of the many HHVM packages or build it from source you
 
 If you're reading this README you probably already found the source code, but the source code lives [here](https://github.com/facebook/hack-example-site).
 
-After cloning the GitHub, run `./setup` to pull in the required external dependencies.
-
 ### Example setup for HHVM + Nginx on Ubuntu 13.10
 
 Nginx is a popular webserver and what I used when building this site. Here are instructions for how I set up my environment.
@@ -38,12 +36,6 @@ You can clone it wherever you like, but for this example I'm putting it in ~/hac
     cd ~
     git clone git@github.com:hhvm/hack-example-site.git
     
-#### Run the setup script
-
-    // Assuming you cloned hack-example-site to ~/hack-example-site
-    cd ~/hack-example-site
-    ./setup
-
 #### Install Nginx
 
     sudo apt-get install nginx
@@ -81,3 +73,27 @@ There is a simple HHVM config in this repo, which you can use. I just overwrite 
 #### Load a page in your browser!
 
 Try going to `localhost` in your browser of choice
+
+### Example setup for Heroku
+
+#### Get a Heroku account and install the toolbelt
+
+If you don't already have a Heroku account, start here: https://id.heroku.com/signup
+
+#### Clone the repo and check out the `heroku` branch
+
+    git clone git@github.com:pvh/hack-example-site.git
+    cd hack-example-site
+
+#### Add a "Procfile" which tells Heroku to start your app using HHVM
+
+    echo 'web: vendor/bin/heroku-hhvm-nginx' > Procfile
+    git add .
+    git commit -am "add a Procfile so that foreman/heroku know how to start the app"
+
+#### Create a heroku app and push the code
+
+    heroku create --buildpack https://github.com/dzuelke/heroku-buildpack-php#hhvm
+    git push heroku master
+    heroku open
+
