@@ -96,7 +96,7 @@ If you don't already have a Heroku account, start here: https://id.heroku.com/si
 
 #### Clone the repo and check out the `heroku` branch
 
-    git clone git@github.com:pvh/hack-example-site.git
+    git clone https://github.com/pvh/hack-example-site.git
     cd hack-example-site
 
 #### Add a "Procfile" which tells Heroku to start your app using HHVM
