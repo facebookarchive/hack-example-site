@@ -38,7 +38,7 @@ Nginx is a popular webserver and what I used when building this site. Here are i
 You can clone it wherever you like, but for this example I'm putting it in ~/hack-example-site
 
     cd ~
-    git clone git@github.com:hhvm/hack-example-site.git
+    git clone https://github.com/hhvm/hack-example-site.git
     
 #### Install dependencies ####
 The Hack Example Site uses [Composer](https://getcomposer.org) to manage its dependencies. Composer is easy to install and easy to use. To install Composer, you just curl the installation script. To install the dependencies you just run the `install` command. For more information about this step, see the Composer [getting started guide](https://getcomposer.org/doc/00-intro.md#installation-nix).
