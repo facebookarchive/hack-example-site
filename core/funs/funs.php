@@ -30,7 +30,3 @@ function invariant_violation(string $message): void {
 function class_meth(string $class, string $method) {
   return array($class, $method);
 }
-
-function tuple(...) {
-  return func_get_args();
-}

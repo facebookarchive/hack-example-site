@@ -93,7 +93,6 @@ If you don't already have a Heroku account, start here: https://id.heroku.com/si
 
 #### Create a heroku app and push the code
 
-    heroku create --buildpack https://github.com/dzuelke/heroku-buildpack-php#hhvm
     git push heroku master
     heroku open
 
