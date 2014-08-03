@@ -16,12 +16,12 @@ final class FakeDB {
       array(
         'id' => 123,
         'name' => 'Alice',
-        'extra' => json_encode(array('age' => 40)),
+        'extra' => $good_extra,
       ),
       array(
         'id' => 456,
         'name' => 'Bob',
-        'extra' => 'corrupt_data',
+        'extra' => $bad_extra,
       ),
     );
   }
