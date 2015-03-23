@@ -26,7 +26,3 @@ function invariant(mixed $test, string $message): void {
 function invariant_violation(string $message): void {
   throw new InvariantViolationException($message);
 }
-
-function class_meth(string $class, string $method) {
-  return array($class, $method);
-}
