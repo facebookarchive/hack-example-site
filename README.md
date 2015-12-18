@@ -8,7 +8,7 @@ The purpose of this site is to provide examples of how to use the Hack Language.
 2. You can clone and deploy this site yourself. This site is designed to be simple to make this as easy as possible.
 3. The contents of this site consist of a Cookbook of Hack Recipes. Each Recipe is a short Hack example that solves some common, interesting typing problem.
 
-If you haven't already, I recommend checking out the [official documentation](http://hhvm.com/manual/en/index.php).
+If you haven't already, I recommend checking out the [official documentation](http://docs.hhvm.com/hack/).
 
 ## Is this site hosted anywhere? ##
 
