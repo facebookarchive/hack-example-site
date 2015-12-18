@@ -76,7 +76,7 @@ abstract class Recipe extends GetController {
     if (!$this->getDocs()->isEmpty()) {
       $render_doc_link = function($doc) {
         list($name, $link) = $doc;
-        $link = "http://docs.hhvm.com/hack/$link.php";
+        $link = "http://docs.hhvm.com/hack/$link";
         return <li><a href={$link}>{$name}</a></li>;
       };
       $main_column->appendChild(

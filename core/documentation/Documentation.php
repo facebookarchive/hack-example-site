@@ -15,7 +15,7 @@ final class :documentation extends :x:element {
   attribute string name;
 
   protected function render(): :xhp {
-    $name = implode('.', explode(' ', $this->getAttribute('name'))).".php";
+    $name = implode('.', explode(' ', $this->getAttribute('name')));
     $href = "http://docs.hhvm.com/hack/$name";
     return <a class="docs button" href={$href} target="_blank">docs &rarr;</a>;
   }
