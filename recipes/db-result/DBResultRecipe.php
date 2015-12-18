@@ -33,8 +33,8 @@ class DBResultRecipe extends Recipe implements RecipeWithDemo {
 
   protected function getDocs(): Vector<(string, string)> {
     return Vector{
-      tuple ('Hack Shapes', 'hack.shapes'),
-      tuple ('Mixed Types', 'hack.annotations.mixedtypes'),
+      tuple ('Hack Shapes', 'shapes/introduction'),
+      tuple ('Mixed Types', 'types/type-system#mixed'),
     };
   }
 

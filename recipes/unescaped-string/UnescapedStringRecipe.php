@@ -34,7 +34,7 @@ class UnescapedStringRecipe extends Recipe implements RecipeWithDemo {
 
   protected function getDocs(): Vector<(string, string)> {
     return Vector{
-      tuple('Opaque Type Aliasing',  'hack.typealiasing.opaquetypealiasing'),
+      tuple('Opaque Type Aliasing',  'type-aliases/opaque'),
     };
   }
 

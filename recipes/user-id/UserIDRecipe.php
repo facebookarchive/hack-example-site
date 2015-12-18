@@ -32,10 +32,10 @@ class UserIDRecipe extends Recipe implements RecipeWithDemo {
 
   protected function getDocs(): Vector<(string, string)> {
     return Vector {
-      tuple('Opaque Type Aliasing',  'hack.typealiasing.opaquetypealiasing'),
+      tuple('Opaque Type Aliasing',  'type-aliases/opaque'),
       tuple(
         'Opaque Type Aliasing with Constraints',
-        'hack.typealiasing.opaquewithconstraints',
+        'type-aliases/opaque#aliases-with-type-constraints',
       ),
     };
   }

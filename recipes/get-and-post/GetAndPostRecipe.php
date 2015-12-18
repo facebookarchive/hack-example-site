@@ -33,7 +33,7 @@ class GetAndPostRecipe extends Recipe implements RecipeWithDemo {
 
   protected function getDocs(): Vector<(string, string)> {
     return Vector {
-      tuple('invariant()', 'hack.otherrulesandfeatures.invariant'),
+      tuple('invariant()', 'types/refining#invariant'),
     };
   }
 

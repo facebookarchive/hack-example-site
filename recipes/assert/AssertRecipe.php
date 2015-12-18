@@ -33,8 +33,8 @@ class AssertRecipe extends Recipe implements RecipeWithDemo {
 
   protected function getDocs(): Vector<(string, string)> {
     return Vector{
-      tuple ('Mixed Types', 'hack.annotations.mixedtypes'),
-      tuple ('Type Inference', 'hack.otherrulesandfeatures.typeinference'),
+      tuple ('Mixed Types', 'types/type-system#mixed'),
+      tuple ('Type Inference', 'types/inference'),
     };
   }
 
