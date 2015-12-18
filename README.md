@@ -61,12 +61,12 @@ The Hack Example Site uses [Composer](https://getcomposer.org) to manage its dep
     sudo apt-get install hhvm
 
 #### Copy the HHVM config file
-There is a simple HHVM config in this repo, which you can use. I just overwrite the server.hdf file, since that's the config that init.d uses. You can always edit the service or start hhvm yourself if you'd rather not overwrite server.hdf
+There is a simple `hhvm.ini` HHVM config in this repo, which you can use. I just overwrite the `server.ini` file, since that's the config that init.d uses. You can always edit the service or start hhvm yourself if you'd rather not overwrite `server.ini`
 
     // Assuming you cloned hack-example-site to ~/hack-example-site
-    // If you don't want to overwrite server.hdf you can always point hhvm 
+    // If you don't want to overwrite server.ini you can always point hhvm 
     // to a config elsewhere
-    sudo cp ~/hack-example-site/hhvm.hdf /etc/hhvm/server.hdf
+    sudo cp ~/hack-example-site/hhvm.ini /etc/hhvm/server.ini
 
 #### Set up the Nginx config
 
