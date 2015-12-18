@@ -16,7 +16,7 @@ final class :documentation extends :x:element {
 
   protected function render(): :xhp {
     $name = implode('.', explode(' ', $this->getAttribute('name'))).".php";
-    $href = "http://hhvm.com/manual/en/$name";
+    $href = "http://docs.hhvm.com/manual/en/$name";
     return <a class="docs button" href={$href} target="_blank">docs &rarr;</a>;
   }
 }

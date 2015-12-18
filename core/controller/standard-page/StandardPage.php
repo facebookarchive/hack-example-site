@@ -52,7 +52,7 @@ trait StandardPage {
               <a href="/">Cookbook</a>
             </li>
             <li>
-              <a href="http://hhvm.com/manual">Docs</a>
+              <a href="http://docs.hhvm.com/hack/">Docs</a>
             </li>
             <li>
               <a href="http://github.com/facebook/hhvm">GitHub</a>
